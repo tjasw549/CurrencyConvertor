@@ -1,7 +1,7 @@
 import requests 
 
-API_KEY = "fca_live_1dzVIZIaxZ5lPEWmv0b4V6E82Xjnrp860DU9bDS4"
-BASE_URL = f"https://api.freecurrencyapi.com/v1/latest?apikey={API_KEY}"
+API_KEY = ~
+BASE_URL = ~
 
 CURRENCIES = ["CAD", "USD", "EUR", "AUD", "CNY", "GBP", "JPY", "CHF", "HKD", "SEK", "NOK", "SGD", "MXN", "PLN", "DKK", "NZD", "CZK", "HUF", "ZAR", "THB", "ILS", "RUB", "TRY"]
 
