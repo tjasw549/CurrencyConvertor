@@ -49,9 +49,9 @@ while True:
 
     del data[base]
     if target_currency in data:
-        print(f"1.00 {base} = {data[target_currency]} {target_currency}")
+        print(f"1.00 {base} = {data[target_currency]:.2f} {target_currency}")
     elif target_currency == "ALL":
         for ticker, value in data.items():
-            print(f"{ticker}: {value}")
+            print(f"{ticker}: {value:.2f}")
     else:
         print(f"Could not retrive exchange rate for {target_currency}")
