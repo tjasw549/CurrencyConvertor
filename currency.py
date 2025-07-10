@@ -31,14 +31,16 @@ while True:
     while True:
         target_currency = input("Enter the currency you want to convert to (type 'ALL' to see every conversion): ").upper()
         
+        if target_currency == "ALL":
+            break
+
         if target_currency not in CURRENCIES:
-            print(f"Invalid currency, please try again")
+            print(f"Invalid currency type")
             continue
         
         if target_currency == base:
-            print()
+            print(f"Currency cannot be the same as the base currency")
             continue
-
         break
 
     data = get_exchange_rates(base)
@@ -47,7 +49,7 @@ while True:
 
     del data[base]
     if target_currency in data:
-        print(f"yippee")
+        print(f"1.00 {base} = {data[target_currency]} {target_currency}")
     elif target_currency == "ALL":
         for ticker, value in data.items():
             print(f"{ticker}: {value}")
